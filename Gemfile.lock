@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: https://ruby.taobao.org/
   specs:
     activemodel (3.2.22)
       activesupport (= 3.2.22)
@@ -32,7 +32,9 @@ GEM
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
     i18n (0.7.0)
+    json (1.8.2)
     multi_json (1.11.2)
+    mysql (2.9.1)
     rack (1.5.5)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
@@ -55,7 +57,6 @@ DEPENDENCIES
   awesome_print
   cramp
   http_router
+  json
+  mysql
   thin
-
-BUNDLED WITH
-   1.10.4

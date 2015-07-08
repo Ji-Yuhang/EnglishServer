@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://ruby.taobao.org'
 
 gem 'cramp'
 
@@ -6,6 +6,8 @@ gem 'cramp'
 gem 'thin'
 gem 'awesome_print'
 gem 'activerecord'
+gem 'mysql'
+gem 'json'
 
 # Rack based routing
 gem 'http_router'
