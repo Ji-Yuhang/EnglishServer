@@ -9,6 +9,10 @@ GEM
       activesupport (= 3.2.22)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
+    activerecord-mysql-adapter (0.0.1)
+      activerecord (>= 3.2.9)
+      activesupport (>= 3.2.9)
+      mysql (>= 2.9.0)
     activesupport (3.2.22)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
@@ -24,17 +28,18 @@ GEM
       rack (~> 1.5.2)
       thor (~> 0.18.0)
     daemons (1.2.3)
-    eventmachine (1.0.7)
+    eventmachine (1.0.8)
     faye-websocket (0.7.5)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.3.5)
-    http_router (0.11.1)
+    http_router (0.11.2)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
     i18n (0.7.0)
-    json (1.8.2)
+    json (1.8.3)
     multi_json (1.11.2)
     mysql (2.9.1)
+    mysql2 (0.3.20)
     rack (1.5.5)
     thin (1.6.3)
       daemons (~> 1.0, >= 1.0.9)
@@ -44,7 +49,7 @@ GEM
     tzinfo (0.3.44)
     url_mount (0.2.1)
       rack
-    websocket-driver (0.5.4)
+    websocket-driver (0.6.2)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
 
@@ -53,10 +58,11 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  activerecord-mysql-adapter
   async-rack
   awesome_print
   cramp
   http_router
   json
-  mysql
+  mysql2
   thin

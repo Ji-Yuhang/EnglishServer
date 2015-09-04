@@ -7,3 +7,6 @@ ActiveRecord::Base.establish_connection :adapter => "mysql",
 
 class Unknownword < ActiveRecord::Base
 end
+
+class Users < ActiveRecord::Base
+end
