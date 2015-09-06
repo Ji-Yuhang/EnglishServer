@@ -18,6 +18,7 @@ gem 'async-rack'
 # For async Active Record models
  #gem 'mysql2', '~> 0.2.11'
 gem 'mysql2' 
+gem 'uuid' 
 #gem  'activerecord-mysql2-adapter'
 # gem 'activerecord', :require => 'active_record'
 
