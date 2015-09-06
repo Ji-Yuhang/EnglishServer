@@ -4,34 +4,26 @@ class LoginAction < Cramp::Action
     ap  pa
     username = pa[:username]
     password = pa[:password]
+
+    data = {}
     uns = Users.where account: username
-    if !uns.nil?
-        un = uns.first
-        data = un.to_json
-        render data
+    un = uns.first
+    if !un.nil?
+        account = un.account
+        uuid = un.uuid
+        user_id = un.user_id
+        data[:data]={}
+        data[:data][:account] = account
+        data[:data][:uuid] = uuid
+        data[:data][:userID] = user_id
+        data[:msg]="SUCCESS"
+        data[:status_code]=1
     else
-        data={}
-        data[:result] = 0
+        data[:msg]="FAIL"
+        data[:status_code]=0
     end
-    uns.each do |un|
-        one = {}
-    end
-=begin
-    uns = Unknownword.where familiarity: 0
-    uns.each do |un|
-        one = {}
-        one["word_id"] = un.word_id
-        one["familiarity"] = un.familiarity
-        begin
-        wordinfo = Wordlist.find un.word_id
-        one["content"] = wordinfo.content
-        rescue
-        end
-    
-        data.push one
-    end
+    ap data
     render data.to_json
-=end
 
     finish
   end
