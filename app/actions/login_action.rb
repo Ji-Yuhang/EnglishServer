@@ -1,4 +1,7 @@
 class LoginAction < Cramp::Action
+    def respond_with
+      [201, {'Content-Type' => 'application/json'}]
+    end
   def start
     pa = params
     ap  pa
