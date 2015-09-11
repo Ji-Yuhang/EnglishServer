@@ -20,10 +20,10 @@ class LoginAction < Cramp::Action
         data[:data][:uuid] = uuid
         data[:data][:userID] = user_id
         data[:msg]="SUCCESS"
-        data[:status_code]=1
+        data[:status_code]=0
     else
         data[:msg]="FAIL"
-        data[:status_code]=0
+        data[:status_code]=-1
     end
     ap data
     render data.to_json
